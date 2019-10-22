@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="Trimandir" size="5.000000 3.817734" />
-    <ImageTarget name="TrimandirCropped" size="6.000000 3.369863" />
+    <ImageTarget name="NewMandir_1920" size="5.000000 3.335938" />
   </Tracking>
 </QCARConfig>

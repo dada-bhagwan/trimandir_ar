@@ -38,3 +38,6 @@ sysinfo.txt
 # MacOS specific
 .DS_Store
 
+/APK/
+/TrimandirPlaystore_4-0.2-v4.symbols.zip
+/TrimandirPlaystore_4.aab
