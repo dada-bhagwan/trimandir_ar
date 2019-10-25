@@ -9,10 +9,11 @@ public class RotateAround : MonoBehaviour
     Vector3 mPrevPos = Vector3.zero;
     Vector3 mPosDelta = Vector3.zero;
     DateTime prevTime;
+    public GameObject plane;
     // Start is called before the first frame update
     void Start()
     {
-
+        GetComponent<Animation>().Rewind();
     }
 
     // Update is called once per frame
@@ -28,6 +29,11 @@ public class RotateAround : MonoBehaviour
                 {
                     //Debug.Log("##### Touch Began");
                     mPrevPos = Vector3.zero;
+                    gameObject.GetComponent<Animation>().Stop();
+                    if(plane != null)
+                    {
+                        plane.transform.localScale = new Vector3(0, 0, 0);
+                    }
                 }
 
                 //Detects Swipe while finger is still moving
@@ -71,5 +77,10 @@ public class RotateAround : MonoBehaviour
             transform.Rotate(Camera.main.transform.right, speed *  Vector3.Dot(mPosDelta, Camera.main.transform.up), Space.World);
         }
         mPrevPos = Input.mousePosition;
+    }
+
+    public void restetAnimation()
+    {
+        gameObject.GetComponent<Animation>().Play();
     }
 }
