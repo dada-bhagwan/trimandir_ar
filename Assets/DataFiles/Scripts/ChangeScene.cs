@@ -26,6 +26,11 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Help");
     }
+	
+	public void GoToWithoutImage()
+    {
+        SceneManager.LoadScene("WithoutImage");
+    }
 
     public void GoTo360()
     {
@@ -36,9 +41,16 @@ public class ChangeScene : MonoBehaviour
     {
         Application.OpenURL("market://details?id=org.dadabhagwan.trimandir.org");
     }
+	
+	public void OpenDadabhagwanORGSite()
+    {
+        Application.OpenURL( "https://www.dadabhagwan.org/");
+    }
 
     public void FeedbackMail()
     {
         Application.OpenURL("mailto:gncapps@googlegroups.com?subject=Feedback/Bug%20Report%20of%20Trimandir%20AR");
     }
+	
+	
 }
