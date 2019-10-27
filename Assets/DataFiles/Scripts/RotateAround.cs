@@ -13,7 +13,8 @@ public class RotateAround : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animation>().Rewind();
+        //GetComponent<Animation>().Rewind();
+        
     }
 
     // Update is called once per frame
@@ -29,7 +30,10 @@ public class RotateAround : MonoBehaviour
                 {
                     //Debug.Log("##### Touch Began");
                     mPrevPos = Vector3.zero;
-                    gameObject.GetComponent<Animation>().Stop();
+                    if(gameObject.GetComponent<Animation>() != null)
+                    {
+                        gameObject.GetComponent<Animation>().Stop();
+                    }
                     if(plane != null)
                     {
                         plane.transform.localScale = new Vector3(0, 0, 0);
@@ -81,6 +85,13 @@ public class RotateAround : MonoBehaviour
 
     public void restetAnimation()
     {
-        gameObject.GetComponent<Animation>().Play();
+        if (gameObject.GetComponent<Animation>() != null)
+        {
+            gameObject.GetComponent<Animation>().Play();
+        }
+        if (plane != null)
+        {
+            plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
+        }
     }
 }

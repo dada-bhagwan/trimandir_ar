@@ -14,10 +14,12 @@ public class IntroVideo : MonoBehaviour
     public Button engBtn;
     public Button hinBtn;
 
-    //Color BtnDefaultColor = new Color(255,0,0,255);
-    Color BtnDefaultColor = Color.blue;
+    //Color BtnDefaultColor = new Color(32, 59, 87);
+    Color BtnDefaultColor = new Color32(32, 59, 87,255);
+    //Color BtnDefaultColor = Color.blue;
     void Start()
     {
+        BtnDefaultColor = hinBtn.colors.disabledColor;
         hinBtn.GetComponent<Image>().color = BtnDefaultColor;
     }
 

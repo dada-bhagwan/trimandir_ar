@@ -34,12 +34,14 @@ public class ChangeScene : MonoBehaviour
 
     public void GoTo360()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         Application.OpenURL("https://www.google.com/maps/@23.1775304,72.5719942,3a,90y,19.82h,97.43t/data=!3m7!1e1!3m5!1sAF1QipPlMtvVyGnfo52XZpjLQbQVnMwllaECdGRSeMt0!2e10!3e12!7i13312!8i6656");
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
-    public void OpenTrimandirApp()
+    public void OpenTrimandirORG()
     {
-        Application.OpenURL("market://details?id=org.dadabhagwan.trimandir.org");
+        Application.OpenURL("https://www.trimandir.org");
     }
 	
 	public void OpenDadabhagwanORGSite()

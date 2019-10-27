@@ -5,13 +5,17 @@ using UnityEngine;
 public class ResetObject : MonoBehaviour
 {
     public GameObject resetObj;
+    Vector3 startScale;
     Vector3 startPos;
+    Quaternion startRotation;
 
 
     // Use this for initialization
     void Start()
     {
-        startPos = transform.localScale;
+        startPos = transform.position;
+        startRotation = transform.rotation;
+        startScale = transform.localScale;
         Debug.Log("Initial Position:" + startPos);
     }
 
@@ -23,7 +27,8 @@ public class ResetObject : MonoBehaviour
 
     public void reset()
     {
-        resetObj.transform.localScale = startPos;
-
+        resetObj.transform.rotation = startRotation;
+        resetObj.transform.position = startPos;
+        resetObj.transform.localScale = startScale;
     }
 }

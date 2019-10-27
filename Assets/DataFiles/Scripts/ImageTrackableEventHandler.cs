@@ -36,7 +36,7 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             
             var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
             Animation[] animationComponents = GetComponentsInChildren<Animation>();
-
+            Debug.Log("####### Animation List:" + animationComponents.Length);
             for (int i = 0; i < objAudioCon.Length; i++)
             {
                 mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Play();
@@ -44,6 +44,12 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             foreach (Animation component in animationComponents)
             {
                 component.Play();
+            }
+
+            GameObject plane = GameObject.Find("Plane");
+            if (plane != null)
+            {
+                plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
             }
         }
     }

@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ba89d519b55abce41916b1102f6e61b1
   - enabled: 1
-    path: Assets/Scenes/TrimandirMainCamera.unity
-    guid: 9dd63c8ad1d5b114d87045e94226c4f7
-  - enabled: 1
     path: Assets/Scenes/Video.unity
     guid: 51cc033375cf83b4892357a38d8ab0a2
   - enabled: 1

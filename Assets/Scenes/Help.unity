@@ -1970,7 +1970,7 @@ PrefabInstance:
     - target: {fileID: 3827889862939334768, guid: 0331b240f5ae79649900e2e44e7832ba,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3827889862939334768, guid: 0331b240f5ae79649900e2e44e7832ba,
         type: 3}
@@ -2006,6 +2006,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827889862939334783, guid: 0331b240f5ae79649900e2e44e7832ba,
+        type: 3}
+      propertyPath: m_text
+      value: Download
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827889862939334783, guid: 0331b240f5ae79649900e2e44e7832ba,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827889862939334783, guid: 0331b240f5ae79649900e2e44e7832ba,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827889862939334783, guid: 0331b240f5ae79649900e2e44e7832ba,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0331b240f5ae79649900e2e44e7832ba, type: 3}
