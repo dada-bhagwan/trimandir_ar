@@ -51,7 +51,7 @@ public class ChangeScene : MonoBehaviour
 
     public void FeedbackMail()
     {
-        Application.OpenURL("mailto:gncapps@googlegroups.com?subject=Feedback/Bug%20Report%20of%20Trimandir%20AR");
+        Application.OpenURL("mailto:dadabhagwanapps@googlegroups.com?subject=Feedback/Bug%20Report%20of%20Trimandir%20AR");
     }
 	
 	
