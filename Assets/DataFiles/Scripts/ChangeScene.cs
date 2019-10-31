@@ -29,7 +29,7 @@ public class ChangeScene : MonoBehaviour
 	
 	public void GoToWithoutImage()
     {
-        SceneManager.LoadScene("WithoutImage");
+        SceneManager.LoadScene("WithoutTarget");
     }
 
     public void GoTo360()

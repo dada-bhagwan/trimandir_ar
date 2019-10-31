@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ba89d519b55abce41916b1102f6e61b1
   - enabled: 1
+    path: Assets/Scenes/WithoutTarget.unity
+    guid: 6467d6b01a9f2a448a1e4fa068bc5cb5
+  - enabled: 1
+    path: Assets/Scenes/WithoutImage.unity
+    guid: 48832ce3fb090ab419f1135f0f7d032a
+  - enabled: 1
     path: Assets/Scenes/Video.unity
     guid: 51cc033375cf83b4892357a38d8ab0a2
   - enabled: 1
     path: Assets/Scenes/Trimandir.unity
     guid: b86d4abef22ff3a42be364e0aee279da
-  - enabled: 1
-    path: Assets/Scenes/WithoutImage.unity
-    guid: 48832ce3fb090ab419f1135f0f7d032a
   - enabled: 1
     path: Assets/Scenes/Help.unity
     guid: b9f6352fd4eedf043a0fc87e7da1e37e

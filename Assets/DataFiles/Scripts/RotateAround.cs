@@ -28,7 +28,7 @@ public class RotateAround : MonoBehaviour
             {
                 if (touch.phase == TouchPhase.Began)
                 {
-                    //Debug.Log("##### Touch Began");
+                    Debug.Log("##### Touch Began");
                     mPrevPos = Vector3.zero;
                     if(gameObject.GetComponent<Animation>() != null)
                     {
@@ -43,7 +43,7 @@ public class RotateAround : MonoBehaviour
                 //Detects Swipe while finger is still moving
                 if (touch.phase == TouchPhase.Moved)
                 {
-                    //Debug.Log("##### Touch Moved");
+                    Debug.Log("##### Touch Moved");
                     rotateModel();
                 }
 
@@ -65,10 +65,10 @@ public class RotateAround : MonoBehaviour
     {
         if(mPrevPos != Vector3.zero)
         {
-            //Debug.Log("############ Mouse" + Input.mousePosition + "   mPrevPos:" + mPrevPos);
+            Debug.Log("############ Mouse" + Input.mousePosition + "   mPrevPos:" + mPrevPos);
             mPosDelta = Input.mousePosition - mPrevPos;
-            //Debug.Log("############ " + Vector3.Dot(mPosDelta, Camera.main.transform.up));
-            //Debug.Log("############ spped" + speed * Vector3.Dot(mPosDelta, Camera.main.transform.up));
+            Debug.Log("############ " + Vector3.Dot(mPosDelta, Camera.main.transform.up));
+            Debug.Log("############ spped" + speed * Vector3.Dot(mPosDelta, Camera.main.transform.up));
             if (Vector3.Dot(transform.up, Vector3.up) >= 0)
             {
                 transform.Rotate(transform.up, speed *  -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
