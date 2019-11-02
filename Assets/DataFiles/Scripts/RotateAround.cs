@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RotateAround : MonoBehaviour
 {
+    public bool isWithoutTarget = false; 
     float speed = 0.1f;
     Vector3 mPrevPos = Vector3.zero;
     Vector3 mPosDelta = Vector3.zero;
@@ -91,7 +92,15 @@ public class RotateAround : MonoBehaviour
         }
         if (plane != null)
         {
-            plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
+            if(isWithoutTarget)
+            {
+                plane.transform.localScale = new Vector3(2.460715f, 4.101191f, 1.640476f);
+            }
+            else
+            {
+                plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
+            }
+            
         }
     }
 }

@@ -5,10 +5,10 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
 
     public bool autoplay = true;
 
-    protected override void OnTrackingLost()
-    {
+    public GameObject HelpPanel;
 
-        
+    protected override void OnTrackingLost()
+    {   
         var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
         Animation[] animationComponents = GetComponentsInChildren<Animation>();
 
@@ -19,17 +19,17 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
 
         foreach (Animation component in animationComponents)
         {
-            component.Stop();
+            //component.Stop();
             // component.Rewind();
         }
+
+        HelpPanel.SetActive(true);
 
         base.OnTrackingLost();
     }
 
     protected override void OnTrackingFound()
     {
-
-        base.OnTrackingFound();
 
         if (autoplay)
         {
@@ -43,7 +43,7 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             }
             foreach (Animation component in animationComponents)
             {
-                component.Play();
+                //component.Play();
             }
 
             GameObject plane = GameObject.Find("Plane");
@@ -52,6 +52,10 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
                 plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
             }
         }
+
+        HelpPanel.SetActive(false);
+
+        base.OnTrackingFound();
     }
 
     #endregion // PROTECTED_METHODS
