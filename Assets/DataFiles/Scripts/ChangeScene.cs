@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
+    public GameObject PopupObj;
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -55,5 +56,23 @@ public class ChangeScene : MonoBehaviour
         Application.OpenURL("mailto:dadabhagwanapps@googlegroups.com?subject=Feedback/Bug%20Report%20of%20Trimandir%20AR");
     }
 	
-	
+    public void GoToHindiIntro()
+    {
+        Application.OpenURL("https://youtu.be/ZCguZTejSho");
+        if(PopupObj != null)
+        {
+            PopupObj.SetActive(false);
+        }
+            
+    }
+
+    public void GoToEngIntro()
+    {
+        Application.OpenURL("https://youtu.be/z0Qmk-TtPNs");
+        if (PopupObj != null)
+        {
+            PopupObj.SetActive(false);
+        }
+    }
+
 }

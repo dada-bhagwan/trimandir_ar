@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3827889862939334782}
   - component: {fileID: 3827889862939334783}
   m_Layer: 5
-  m_Name: download
+  m_Name: UnderLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901764
-  m_fontColor: {r: 0.016251087, g: 0, b: 1, a: 1}
+    rgba: 4283906848
+  m_fontColor: {r: 0.1254902, g: 0.23137255, b: 0.34117648, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
