@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RotateAround : MonoBehaviour
 {
@@ -10,19 +11,11 @@ public class RotateAround : MonoBehaviour
     Vector3 mPosDelta = Vector3.zero;
     public GameObject plane;
     Vector3 planeInitialScale;
-
-    Vector3 startScale;
-    Vector3 startPos;
-    Quaternion startRotation;
     // Start is called before the first frame update
     void Start()
     {
         //GetComponent<Animation>().Rewind();
         planeInitialScale = plane.transform.localScale;
-        startPos = this.transform.position;
-        startRotation = transform.rotation;
-        startScale = transform.localScale;
-        Debug.Log("Start:" + startPos + "\t" + startRotation + "\t" + startScale);
     }
 
     // Update is called once per frame
@@ -73,28 +66,6 @@ public class RotateAround : MonoBehaviour
 
     }
 
-    /*void rotateModel()
-    {
-        if(mPrevPos != Vector3.zero)
-        {
-            Debug.Log("############ Mouse" + Input.mousePosition + "   mPrevPos:" + mPrevPos);
-            mPosDelta = Input.mousePosition - mPrevPos;
-            Debug.Log("############ " + Vector3.Dot(mPosDelta, Camera.main.transform.up));
-            Debug.Log("############ spped" + speed * Vector3.Dot(mPosDelta, Camera.main.transform.up));
-            if (Vector3.Dot(transform.up, Vector3.up) >= 0)
-            {
-                transform.Rotate(transform.up, speed *  -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
-            }
-            else
-            {
-                transform.Rotate(transform.up, speed *  Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
-            }
-
-            transform.Rotate(Camera.main.transform.right, speed *  Vector3.Dot(mPosDelta, Camera.main.transform.up), Space.World);
-        }
-        mPrevPos = Input.mousePosition;
-    }*/
-
     void rotateModel()
     {
         if (mPrevPos != Vector3.zero)
@@ -119,13 +90,8 @@ public class RotateAround : MonoBehaviour
 
     public void restetAnimation()
     {
-        //transform.rotation = startRotation;
-        transform.position = startPos;
-        transform.localScale = startScale;
-        transform.rotation = new Quaternion(-90, 180, 0,0);
-        //this.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
-        Debug.Log("Start:" + gameObject.transform.position + "\t" + gameObject.transform.rotation + "\t" + gameObject.transform.localScale);
-        Animator cachedRef = gameObject.GetComponent<Animator> ();
+        SceneManager.LoadScene("WithoutTarget");
+        /*Animator cachedRef = gameObject.GetComponent<Animator> ();
         if (cachedRef != null)
         {
             cachedRef.enabled = true;
@@ -136,6 +102,6 @@ public class RotateAround : MonoBehaviour
         if (plane != null)
         {
             plane.transform.localScale = planeInitialScale;
-        }
+        }*/
     }
 }
