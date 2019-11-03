@@ -255,7 +255,7 @@ PrefabInstance:
     - target: {fileID: 6030524763191806817, guid: eb7e3e5bececab74f85727cd8e704dba,
         type: 3}
       propertyPath: m_Text
-      value: 2. Print Trimandir Image, You can print in color or black&white
+      value: 2. Print Trimandir Image, You can print in color or black & white
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb7e3e5bececab74f85727cd8e704dba, type: 3}
@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 6030524763191806817, guid: eb7e3e5bececab74f85727cd8e704dba,
         type: 3}
       propertyPath: m_Text
-      value: 1. Download Trimandir Image by Click Below
+      value: 1. Download Trimandir Image by Clicking Below
       objectReference: {fileID: 0}
     - target: {fileID: 6030524763191806817, guid: eb7e3e5bececab74f85727cd8e704dba,
         type: 3}
@@ -775,8 +775,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 2800000, guid: 77f20091c2dd96e40a6f4b0e2d807632, type: 3}
   m_UVRect:
     serializedVersion: 2
@@ -847,8 +845,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
@@ -1159,8 +1155,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1433807941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,8 +2083,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2029632451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,8 +2101,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 822e2a7d96b5dcb4b8b93e29155b8a14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2317,8 +2307,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &6030524762544221410
 PrefabInstance:
   m_ObjectHideFlags: 0
