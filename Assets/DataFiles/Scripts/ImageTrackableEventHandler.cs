@@ -42,6 +42,7 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             }
 
             animator.enabled = true;
+            // animator start from first Node
 
             GameObject plane = GameObject.Find("Plane");
             if (plane != null)
