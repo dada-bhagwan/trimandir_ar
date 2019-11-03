@@ -13,9 +13,9 @@ public class ResetObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        startPos = transform.position;
-        startRotation = transform.rotation;
-        startScale = transform.localScale;
+        startPos = resetObj.transform.position;
+        startRotation = resetObj.transform.rotation;
+        startScale = resetObj.transform.localScale;
         Debug.Log("Initial Position:" + startPos);
     }
 
@@ -31,5 +31,6 @@ public class ResetObject : MonoBehaviour
         resetObj.transform.rotation = startRotation;
         resetObj.transform.position = startPos;
         resetObj.transform.localScale = startScale;
+        Debug.Log("Reset Position:" + startPos);
     }
 }
