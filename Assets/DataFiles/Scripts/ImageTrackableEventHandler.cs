@@ -7,21 +7,19 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
 
     public GameObject HelpPanel;
 
+    [SerializeField]
+    protected Animator animator;
+
     protected override void OnTrackingLost()
     {   
         var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
-        Animation[] animationComponents = GetComponentsInChildren<Animation>();
 
         for (int i = 0; i < objAudioCon.Length; i++)
         {
             mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Pause();
         }
 
-        foreach (Animation component in animationComponents)
-        {
-            //component.Stop();
-            // component.Rewind();
-        }
+        animator.enabled = false;
 
         HelpPanel.SetActive(true);
 
@@ -35,16 +33,15 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
         {
             
             var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
-            Animation[] animationComponents = GetComponentsInChildren<Animation>();
-            Debug.Log("####### Animation List:" + animationComponents.Length);
+
+            Debug.Log("####### Animation List:" );
+
             for (int i = 0; i < objAudioCon.Length; i++)
             {
                 mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Play();
             }
-            foreach (Animation component in animationComponents)
-            {
-                //component.Play();
-            }
+
+            animator.enabled = true;
 
             GameObject plane = GameObject.Find("Plane");
             if (plane != null)

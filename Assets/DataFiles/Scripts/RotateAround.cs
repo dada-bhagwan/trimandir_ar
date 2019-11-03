@@ -31,9 +31,12 @@ public class RotateAround : MonoBehaviour
                 {
                     Debug.Log("##### Touch Began");
                     mPrevPos = Vector3.zero;
-                    if(gameObject.GetComponent<Animation>() != null)
+
+                    Animator cachedRef = gameObject.GetComponent<Animator> ();
+
+                    if ( cachedRef != null)
                     {
-                        gameObject.GetComponent<Animation>().Stop();
+                        cachedRef.StopPlayback (); ;
                     }
                     if(plane != null)
                     {
@@ -86,10 +89,12 @@ public class RotateAround : MonoBehaviour
 
     public void restetAnimation()
     {
-        if (gameObject.GetComponent<Animation>() != null)
+        Animator cachedRef = gameObject.GetComponent<Animator> ();
+        if (cachedRef != null)
         {
-            gameObject.GetComponent<Animation>().Play();
+            cachedRef.StartPlayback (); ;
         }
+
         if (plane != null)
         {
             if(isWithoutTarget)
