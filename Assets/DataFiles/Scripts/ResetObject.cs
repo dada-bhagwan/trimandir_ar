@@ -27,6 +27,7 @@ public class ResetObject : MonoBehaviour
 
     public void reset()
     {
+        resetObj.SetActive(true);
         resetObj.transform.rotation = startRotation;
         resetObj.transform.position = startPos;
         resetObj.transform.localScale = startScale;

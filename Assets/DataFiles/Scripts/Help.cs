@@ -21,6 +21,11 @@ public class Help : MonoBehaviour
 
     public void DownloadImage()
     {
-        Application.OpenURL("https://drive.google.com/open?id=19B5YMe1Eyf5VBN3MwidQucX1930u70La");
+        Application.OpenURL("https://rebrand.ly/trimandirar");
+    }
+
+    public void OpenHelpVideo()
+    {
+        Application.OpenURL("https://rebrand.ly/trimandirarhelp");
     }
 }
