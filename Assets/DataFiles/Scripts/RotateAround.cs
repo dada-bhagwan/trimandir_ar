@@ -26,7 +26,7 @@ public class RotateAround : MonoBehaviour
         //Debug.Log("############ " + Input.GetMouseButton(0));
         if (Input.GetMouseButton(0))
         {
-            if(Input.touches.Length == 1)
+            if(Input.touches.Length >= 1)
             {
                 Touch touch = Input.touches[0];
                 if (touch.phase == TouchPhase.Began)
@@ -50,13 +50,15 @@ public class RotateAround : MonoBehaviour
                         plane.transform.localScale = new Vector3(0, 0, 0);
                     }
                 }
-
-                //Detects Swipe while finger is still moving
-                if (touch.phase == TouchPhase.Moved)
-                {
-                    Debug.Log("##### Touch Moved");
-                    rotateModel();
+                if(Input.touches.Length == 1) {
+                    if (touch.phase == TouchPhase.Moved)
+                    {
+                        Debug.Log("##### Touch Moved");
+                        rotateModel();
+                    }
                 }
+                //Detects Swipe while finger is still moving
+                
 
                 //Detects swipe after finger is released
                 if (touch.phase == TouchPhase.Ended)
