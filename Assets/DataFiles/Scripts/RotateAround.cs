@@ -17,8 +17,6 @@ public class RotateAround : MonoBehaviour
     {
         //GetComponent<Animation>().Rewind();
         planeInitialScale = plane.transform.localScale;
-        if (withoutTarget)
-            speed = 0.2f;
     }
 
     // Update is called once per frame
