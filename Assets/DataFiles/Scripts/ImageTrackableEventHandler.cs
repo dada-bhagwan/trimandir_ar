@@ -18,8 +18,8 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
         {
             mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Pause();
         }
-
-        animator.enabled = false;
+        if(animator != null)
+            animator.enabled = false;
 
         HelpPanel.SetActive(true);
 
@@ -40,8 +40,8 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             {
                 mTrackableBehaviour.GetComponentsInChildren<AudioSource>()[i].Play();
             }
-
-            animator.enabled = true;
+            if (animator != null)
+                animator.enabled = true;
             // animator start from first Node
 
             GameObject plane = GameObject.Find("Plane");

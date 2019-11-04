@@ -11,11 +11,14 @@ public class RotateAround : MonoBehaviour
     Vector3 mPosDelta = Vector3.zero;
     public GameObject plane;
     Vector3 planeInitialScale;
+	public bool withoutTarget = false;
     // Start is called before the first frame update
     void Start()
     {
         //GetComponent<Animation>().Rewind();
         planeInitialScale = plane.transform.localScale;
+        if (withoutTarget)
+            speed = 0.2f;
     }
 
     // Update is called once per frame
@@ -39,6 +42,10 @@ public class RotateAround : MonoBehaviour
                     {
                         cachedRef.StopPlayback();
                         cachedRef.enabled = false;
+                    }
+					if(gameObject.GetComponent<Animation>() != null)
+                    {
+                        gameObject.GetComponent<Animation>().Stop();
                     }
                     if (plane != null)
                     {
@@ -90,7 +97,14 @@ public class RotateAround : MonoBehaviour
 
     public void restetAnimation()
     {
-        SceneManager.LoadScene("WithoutTarget");
+        if(withoutTarget)
+        {
+            SceneManager.LoadScene("WithoutTarget");
+        } else
+        {
+            SceneManager.LoadScene("Trimandir");
+        }
+        
         /*Animator cachedRef = gameObject.GetComponent<Animator> ();
         if (cachedRef != null)
         {
