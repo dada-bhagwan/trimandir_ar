@@ -26,7 +26,8 @@ public class RotateAround : MonoBehaviour
         //Debug.Log("############ " + Input.GetMouseButton(0));
         if (Input.GetMouseButton(0))
         {
-            if(Input.touches.Length >= 1)
+            Debug.Log("######### isTrakingFound:" + ImageTrackableEventHandler.isTrakingFound);
+            if(Input.touches.Length >= 1 && (ImageTrackableEventHandler.isTrakingFound || withoutTarget))
             {
                 Touch touch = Input.touches[0];
                 if (touch.phase == TouchPhase.Began)

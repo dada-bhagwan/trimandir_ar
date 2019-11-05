@@ -3,6 +3,7 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
 {
     #region PROTECTED_METHODS
 
+    public static bool isTrakingFound = false;
     public bool autoplay = true;
     bool isFirst = true;
     public GameObject HelpPanel;
@@ -11,7 +12,8 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
     protected Animator animator;
 
     protected override void OnTrackingLost()
-    {   
+    {
+        isTrakingFound = false;
         var objAudioCon = mTrackableBehaviour.GetComponentsInChildren<AudioSource>();
 
         for (int i = 0; i < objAudioCon.Length; i++)
@@ -28,7 +30,8 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
 
     protected override void OnTrackingFound()
     {
-
+        isTrakingFound = true;
+        Debug.Log("#### Traking Found");
         if (autoplay)
         {
             
