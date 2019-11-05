@@ -4,7 +4,7 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
     #region PROTECTED_METHODS
 
     public bool autoplay = true;
-
+    bool isFirst = true;
     public GameObject HelpPanel;
 
     [SerializeField]
@@ -43,12 +43,22 @@ public class ImageTrackableEventHandler : DefaultTrackableEventHandler
             if (animator != null)
                 animator.enabled = true;
             // animator start from first Node
-
-            GameObject plane = GameObject.Find("Plane");
+			
+			Animation[] animationComponents = GetComponentsInChildren<Animation>();
+			if(isFirst && animationComponents != null)
+            {
+                foreach (Animation component in animationComponents)
+                {
+                    //component.Play();
+                    component.Rewind();
+                }
+                isFirst = false;
+            }
+            /*GameObject plane = GameObject.Find("Plane");
             if (plane != null)
             {
                 plane.transform.localScale = new Vector3(0.16453f, 0.16453f, 0.16453f);
-            }
+            }*/
         }
 
         HelpPanel.SetActive(false);
